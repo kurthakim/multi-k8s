@@ -16,7 +16,7 @@ after_success:
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hubs
-  - docker push kurthakim/multi-client
-  - docker push kurthakim/multi-nginx
-  - docker push kurthakim/multi-server
-  - docker push kurthakim/multi-worker
+  - docker push alverta/multi-client
+  - docker push alverta/multi-nginx
+  - docker push alverta/multi-server
+  - docker push alverta/multi-worker

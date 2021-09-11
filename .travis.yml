@@ -15,6 +15,13 @@ after_success:
   - docker build -t kurthakim/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
+  # tag images
+  - docker tag kurthakim/multi-client alverta/multi-client
+  - docker tag kurthakim/multi-nginx alverta/multi-nginx
+  - docker tag kurthakim/multi-server alverta/multi-server
+  - docker tag kurthakim/multi-worker alverta/multi-worker
+
   # Take those images and push them to docker hubs
   - docker push alverta/multi-client
   - docker push alverta/multi-nginx

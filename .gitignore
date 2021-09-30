@@ -1,0 +1,4 @@
+/nginx.bak
+docker-compose-dev.yml.bak
+docker-compose.yml.bak
+.travis.yml.bak
